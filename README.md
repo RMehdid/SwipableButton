@@ -14,9 +14,7 @@ SwipableButton is a SwiftUI view that presents a slide button that can be swiped
 
 ### Swift Package Manager
 
-You can add SwipableButton to your project using Swift Package Manager. In Xcode, go to `File` -> `Swift Packages` -> `Add Package Dependency` and enter the package URL:
-
-https://github.com/RMehdid/SwipableButton.git
+You can add SwipableButton to your project using Swift Package Manager. In Xcode, go to `File` -> `Swift Packages` -> `Add Package Dependency` and enter the package URL: ```https://github.com/RMehdid/SwipableButton.git```
 
 
 ### Manual Installation
