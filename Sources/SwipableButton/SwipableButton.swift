@@ -152,12 +152,8 @@ struct SwipableButton_Previews: PreviewProvider {
         var body: some View {
             ScrollView {
                 VStack(spacing: 25) {
-                    SwipableButton("Centered text and lorem ipsum dolor sit", action: buttonAction)
-                    SwipableButton("Leading text and no fade", style: .init(textAlignment: .leading, textFadesOpacity: false), action: buttonAction)
-                    SwipableButton("Center text and no mask", style: .init(textHiddenBehindIndicator: false), action: buttonAction)
-                    SwipableButton("Remaining space center", style: .init(indicatorColor: .red, indicatorSystemName: "trash"), action: buttonAction)
-                    SwipableButton("Trailing and immediate response", style: .init(textAlignment: .trailing), action: buttonAction)
-                    SwipableButton("Global center", style: .init(indicatorColor: .red, indicatorSystemName: "trash", textAlignment: .center, textShimmers: true), action: buttonAction)
+                    SwipableButton("Button text here", action: buttonAction)
+                    SwipableButton("Swipe to delete", style: .init(indicatorColor: .red, indicatorSystemName: "trash", textAlignment: .center, textShimmers: true), action: buttonAction)
                     SwipableButton("Spacing 15", style: .init(indicatorSpacing: 15), action: buttonAction)
                     SwipableButton("Big", style: .init(indicatorSize: 100), action: buttonAction)
                     SwipableButton("Disabled green", style: .init(indicatorColor: .green), action: buttonAction)
