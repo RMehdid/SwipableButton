@@ -49,10 +49,10 @@ For more customization options and examples, refer to the Documentation section.
 
 For detailed documentation and usage examples, visit the SwipableButton Documentation.
 
-### Contributing
+## Contributing
 
 Contributions are welcome! If you have any ideas, bug reports, or feature requests, please open an issue or submit a pull request.
 
-### License
+## License
 
 SwipableButton is available under the **MIT license.** See the **LICENSE** file for more information.
