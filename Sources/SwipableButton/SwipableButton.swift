@@ -148,14 +148,20 @@ struct SwipableButton_Previews: PreviewProvider {
         var body: some View {
             ScrollView {
                 VStack(spacing: 25) {
-                    SwipableButton("Button text here", action: buttonAction)
-                    SwipableButton("Swipe to delete", style: .init(indicatorColor: .red, indicatorSystemName: "trash", textAlignment: .center, textShimmers: true), action: buttonAction)
-                    SwipableButton("Spacing 15", style: .init(indicatorSpacing: 15), action: buttonAction)
-                    SwipableButton("Big", style: .init(indicatorSize: 100), action: buttonAction)
-                    SwipableButton("Disabled green", style: .init(indicatorColor: .green), action: buttonAction)
-                        .disabled(true)
-                    SwipableButton("Disabled", action: buttonAction)
-                        .disabled(true)
+                    HStack{
+                        SwipableButton("Button text here", action: buttonAction)
+                        SwipableButton("Swipe to delete", style: .init(indicatorColor: .red, indicatorSystemName: "trash", textAlignment: .center, textShimmers: true), action: buttonAction)
+                    }
+                    HStack{
+                        SwipableButton("Spacing 15", style: .init(indicatorSpacing: 15), action: buttonAction)
+                        SwipableButton("Big", style: .init(indicatorSize: 100), action: buttonAction)
+                    }
+                    HStack{
+                        SwipableButton("Disabled green", style: .init(indicatorColor: .green), action: buttonAction)
+                            .disabled(true)
+                        SwipableButton("Disabled", action: buttonAction)
+                            .disabled(true)
+                    }
                 }.padding(.horizontal)
             }
         }
@@ -167,6 +173,7 @@ struct SwipableButton_Previews: PreviewProvider {
 
     static var previews: some View {
         ContentView()
+            .padding()
     }
 }
 #endif
