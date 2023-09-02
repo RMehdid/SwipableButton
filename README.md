@@ -1,3 +1,5 @@
+![Header Image](/Sources/Assets/Preview.png)
+
 # SwipableButton
 
 SwipableButton is a SwiftUI view that presents a slide button that can be swiped to unlock or perform an action. This customizable button is designed to provide an engaging and interactive user interface element for your iOS and macOS apps.
