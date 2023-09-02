@@ -9,7 +9,7 @@ import SwiftUI
 
 public extension SwipableButton {
     ///  A struct that defines the styling options for a `SlideButton`.
-    struct Styling {
+    struct Style {
         /// Initializes a new `Styling` instance with the given options.
         /// - Parameters:
         ///   - indicatorSize: The size of the indicator. Default is `60`.
@@ -31,7 +31,7 @@ public extension SwipableButton {
             textColor: Color = .secondary,
             indicatorSystemName: String = "chevron.right",
             indicatorDisabledSystemName: String = "xmark",
-            textAlignment: SlideTextAlignment = .center,
+            textAlignment: SwipeTextAlignment = .center,
             textFadesOpacity: Bool = true,
             textHiddenBehindIndicator: Bool = true,
             textShimmers: Bool = false
@@ -61,7 +61,7 @@ public extension SwipableButton {
         internal var indicatorSystemName: String
         internal var indicatorDisabledSystemName: String
         
-        internal var textAlignment: SlideTextAlignment
+        internal var textAlignment: SwipeTextAlignment
         internal var textFadesOpacity: Bool
         internal var textHiddenBehindIndicator: Bool
         internal var textShimmers: Bool
@@ -70,7 +70,7 @@ public extension SwipableButton {
     }
     
     ///  An enumeration that defines the alignment options for the title text in a `SlideButton`.
-    enum SlideTextAlignment {
+    enum SwipeTextAlignment {
         /// The title text is aligned to the leading edge of the title space.
         case leading
         /// The title text is aligned to the center of the button, not shifted for the indicator.
