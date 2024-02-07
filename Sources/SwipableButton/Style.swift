@@ -26,7 +26,8 @@ public extension SwipableButton {
         public init(
             indicatorSize: CGFloat = 60,
             indicatorSpacing: CGFloat = 5,
-            indicatorColor: Color = .accentColor,
+            indicatorBackgroundColor: Color = .accentColor,
+            indicatorColor: Color = .white,
             backgroundColor: Color? = nil,
             textColor: Color = .secondary,
             indicatorSystemName: String = "chevron.right",
@@ -39,6 +40,7 @@ public extension SwipableButton {
             self.indicatorSize = indicatorSize
             self.indicatorSpacing = indicatorSpacing
             
+            self.indicatorBackgroundColor = indicatorBackgroundColor
             self.indicatorColor = indicatorColor
             self.backgroundColor = backgroundColor ?? indicatorColor.opacity(0.3)
             self.textColor = textColor
@@ -54,6 +56,7 @@ public extension SwipableButton {
         internal var indicatorSize: CGFloat
         internal var indicatorSpacing: CGFloat
         
+        internal var indicatorBackgroundColor: Color
         internal var indicatorColor: Color
         internal var backgroundColor: Color
         internal var textColor: Color

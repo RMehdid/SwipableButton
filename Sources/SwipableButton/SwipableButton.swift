@@ -67,7 +67,7 @@ public struct SwipableButton: View {
                 
                 Circle()
                     .frame(width: style.indicatorSize - 2 * style.indicatorSpacing, height: style.indicatorSize - 2 * style.indicatorSpacing)
-                    .foregroundColor(isEnabled ? style.indicatorColor : .gray)
+                    .foregroundColor(isEnabled ? style.in : .gray)
                     .overlay(content: {
                         ZStack {
                             // Replace `.circular` with `.linear`
@@ -150,14 +150,14 @@ struct SwipableButton_Previews: PreviewProvider {
                 VStack(spacing: 25) {
                     HStack{
                         SwipableButton("Button text here", action: buttonAction)
-                        SwipableButton("Swipe to delete", style: .init(indicatorColor: .red, indicatorSystemName: "trash", textAlignment: .center, textShimmers: true), action: buttonAction)
+                        SwipableButton("Swipe to delete", style: .init(indicatorBackgroundColor: .red, indicatorSystemName: "trash", textAlignment: .center, textShimmers: true), action: buttonAction)
                     }
                     HStack{
                         SwipableButton("Spacing 15", style: .init(indicatorSpacing: 15), action: buttonAction)
                         SwipableButton("Big", style: .init(indicatorSize: 100), action: buttonAction)
                     }
                     HStack{
-                        SwipableButton("Disabled green", style: .init(indicatorColor: .green), action: buttonAction)
+                        SwipableButton("Disabled green", style: .init(indicatorBackgroundColor: .green), action: buttonAction)
                             .disabled(true)
                         SwipableButton("Disabled", action: buttonAction)
                             .disabled(true)
