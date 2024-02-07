@@ -67,7 +67,7 @@ public struct SwipableButton: View {
                 
                 Circle()
                     .frame(width: style.indicatorSize - 2 * style.indicatorSpacing, height: style.indicatorSize - 2 * style.indicatorSpacing)
-                    .foregroundColor(isEnabled ? style.in : .gray)
+                    .foregroundColor(isEnabled ? style.indicatorBackgroundColor : .gray)
                     .overlay(content: {
                         ZStack {
                             // Replace `.circular` with `.linear`
@@ -75,7 +75,7 @@ public struct SwipableButton: View {
                                 .foregroundColor(.white)
                                 .opacity(swipeState == .end ? 1 : 0)
                             Image(systemName: isEnabled ? style.indicatorSystemName : style.indicatorDisabledSystemName)
-                                .foregroundColor(.white)
+                                .foregroundColor(style.indicatorColor)
                                 .font(.system(size: max(0.4 * style.indicatorSize, 0.5 * style.indicatorSize - 2 * style.indicatorSpacing), weight: .semibold))
                                 .opacity(swipeState == .end ? 0 : 1)
                         }
